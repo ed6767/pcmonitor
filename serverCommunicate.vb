@@ -3,7 +3,7 @@ Public Class serverCommunicate
     Public Shared mainDisplay As Screen
     Shared Function currentStatusfromServer() As Dictionary(Of String, String)
         ' Fetch config from webserver that will apply regardless if a client connects to the server
-        Return JsonConvert.DeserializeObject(Of Dictionary(Of String, String))((New Net.WebClient).DownloadString("https://edward.website/personal/pcmanager/globalAction.json"))
+        Return JsonConvert.DeserializeObject(Of Dictionary(Of String, String))((New Net.WebClient).DownloadString("urltojson.json"))
     End Function
 
     Shared Function newOverideRequest() As Boolean
